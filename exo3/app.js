@@ -10,7 +10,21 @@ for( let i = 1; i <= 9; i++){
     carre.appendChild(newbox);
     
 
+    //function click morpion X ou O
+    newbox.addEventListener("click", function(){ 
+        if(!newbox.classList.contains("box")){
+            newbox.innerText = "X";
+            newbox.style.color= "red";
+        } else if(newbox.classList.contains("box")){
+            newbox.innerText = "O";
+            newbox.style.color = "green";
+        };
+        newbox = newbox === "O" ? "O" : "X"; 
+    });
+
+
     
+
 
 
 };
