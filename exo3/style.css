@@ -1,0 +1,35 @@
+*{
+    padding: auto;
+    margin: auto;
+    box-sizing: border-box;
+    max-width: 100vw;
+    height: 100vh;
+}
+.carre{
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: auto auto auto;
+    align-content: center;
+    justify-content: center;
+    background: url("./wallpa.jpg") no-repeat center center fixed;
+    box-shadow: inset 0 0 41px 86px #282a2d;   
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.box{
+    /* border: 1px solid black; */
+    background-color: rgba(255, 255, 255, 0.5);
+    filter: blur(1.5px);
+    height: 200px;
+    width: 200px;
+    display: flex;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    margin: 4px;
+    align-items: center;
+    justify-content: center;
+
+}
