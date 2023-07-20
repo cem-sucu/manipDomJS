@@ -1,0 +1,27 @@
+.carre{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box{
+    background-color: rgb(136, 174, 136);
+    color: rgb(255, 255, 255);
+    height: 200px;
+    width: 200px;
+    display: flex;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    text-align: center;
+    align-items: center;
+    margin: 5px;
+    cursor: pointer;
+    transform: transform 0.8s;
+}
+
+.box-valid{
+    background-color: rgb(179, 54, 54);
+    transform: scale(0.9);
+    transform: rotate(0.2turn);
+}
+
+
