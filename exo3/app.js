@@ -3,11 +3,18 @@
 const box = document.createElement("div");
 //la <div> que je viens de creer je lui ajoute un nom de class box donc -> <div class="box">
 box.classList.add('box');
-// ici je selectionne avec document.querySelector la <div class="carre"> qui existe deja dans le html
+// ici je selectionne avec document.querySelector la <div class=".carre"> qui existe deja dans le html
 const carre = document.querySelector(".carre");
-
+// ici je selectionne avec document.querySelector la <div class=".text"> qui existe deja dans le html
+const text = document.querySelector(".text");
 //je creer un array [] vide que j'appel grid
 const grid = [];
+
+// je selectionne les balise <p> existante o et x et avec textContent je fait afficher la lettre X et O.
+const x = document.querySelector(".x");
+
+const o = document.querySelector(".o");
+
 
 
 // je creer une function pour interagir avec les case creer. 
@@ -36,9 +43,22 @@ function boxClicker(event){
         // console.log(grid); // permet d'obtenir sa position du click par rapport au tableau
         // console.log(grid[index]); // permet de recuperer le symbole
 
+         // Ajouter la classe correspondante pour le symbole actuel
+         boxClicker.classList.add(joueurA);
+
         // permet d'afficher le symbole du joueur au clique
-        boxClicker.innerText = joueurA;
-    };
+        boxClicker.textContent = joueurA;
+    } else {
+        // si la case est déja cliquer aors affiche moi ce message
+        text.textContent = "cette case a deja étais cliqué"
+
+        // je mets un setTimeOut en place pour que au bout de 1s le text disparaisse
+        setTimeout(function(){
+            //le text devient vide
+            text.textContent = " ";
+            //au bout de 1000, donc de 1 seconde
+        }, 1000);
+    }
 };
 
 
@@ -48,9 +68,11 @@ function joueurActuel(){
     // console.log(grid); permet d'obtenir la position du joeuru au click par rapport au tableau
     // console.log(grid.filter);
     // ici sur la grid la méthode .filter(boolean).length nous renvoie un nvo tableau ne contenant que les valeur vrai, donc celle qui sont déja cliqué, puis en fonction du nombre de case qu'on récupére grace a .length cela nous permet de savoir la longueur des cases.
+  
     const cassClicker = grid.filter(Boolean).length;
-    // ici on return avec une ternaire et le signe de modulo %, Si le nombre de cases occupées est pair, c'est le tour du joueur X, sinon sic'est impaire, c'est le tour du joueur O.
-    return cassClicker %2 === 0 ? "X" : "O";
+    // ici on return avec une ternaire et le signe de modulo %, Si le nombre de cases occupées est pair, c'est le tour du joueur X, sinon si c'est impaire, c'est le tour du joueur O.
+    return cassClicker %2 === 0 ? "x": "o";
+    
 };
 
 // creation de 9 box pour le morpion

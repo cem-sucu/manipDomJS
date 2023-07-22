@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lumanosimo&display=swap');
+
 *{
     padding: auto;
     margin: auto;
@@ -32,4 +34,27 @@
     align-items: center;
     justify-content: center;
 
+}
+
+.text{
+    position: absolute;
+    display: flex;
+    left: 23%;
+    font-size: 4rem;
+    color: red;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.x{
+    color: black;
+    font-size: 9rem;
+    font-family: 'Lumanosimo', cursive;
+}
+
+.o{
+    color: red;
+    font-size: 9rem;
+    font-family: 'Lumanosimo', cursive;
 }
