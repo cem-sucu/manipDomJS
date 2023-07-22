@@ -17,6 +17,10 @@ const o = document.querySelector(".o");
 
 
 
+let jeuFinis = false;
+let coupJouer = 0;
+
+
 // je creer une function pour interagir avec les case creer. 
 //j'ecris (event) en parametre pour recevoir des informations sur l'événement déclenché lorsque le gestionnaire d'événements est appelé.
 // c'est a dire une fois la function boxClique créé et l'appel effectuer sur la case avec newbox.addEventListener("click", boxClick), je peux utiliser event dans les parametres pour pouvoir utiliser son target et donc de pouvoir l'associé a la const boxClicker
@@ -58,6 +62,16 @@ function boxClicker(event){
             text.textContent = " ";
             //au bout de 1000, donc de 1 seconde
         }, 1000);
+    }
+
+    // Vérifier si toutes les cases ont été occupées avec le meme filter etsi il est = a 9alors partis terminer
+    if (!jeuFinis && grid.filter(Boolean).length === 9) {
+        // Marquer la partie comme terminée pour éviter l'affichage répété du message
+        jeuFinis = true;
+
+        // Afficher le message de fin de partie
+        text.textContent = "Partie terminée !";
+        text.classList.add("messageTerminer")
     }
 };
 

@@ -45,6 +45,7 @@
     align-content: center;
     flex-direction: column;
     justify-content: center;
+    z-index: 30;
 }
 
 .x{
@@ -57,4 +58,12 @@
     color: red;
     font-size: 9rem;
     font-family: 'Lumanosimo', cursive;
+}
+.messageTerminer{
+    left: 0%;
+    color: red;
+    font-size: 3rem;
+    font-weight: bold
+
+
 }
