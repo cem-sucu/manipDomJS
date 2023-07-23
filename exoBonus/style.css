@@ -11,4 +11,10 @@
     grid-template-columns: repeat(15, 60px); /* 15 colonnes de 60px chacune */
     grid-auto-rows: 60px; /* Hauteur égale pour chaque ligne de la grille (60px) */
     width: 900px; /* la taille de la bordure pour englober toutes les box*/
+    float: left; /* Ajoutez cette propriété pour aligner la grille à gauche */
+    margin-right: 20px; /* Ajoutez une marge à droite pour séparer la grille de l'image */
+}
+
+.img{
+    float: left; /* Alignez l'image à gauche */
 }
