@@ -1,0 +1,14 @@
+.box {
+    height: 60px;
+    width: 60px;
+    border: 1px solid black;
+    margin: -1px;
+}
+
+.carre {
+    border: 5px solid black;
+    display: grid;
+    grid-template-columns: repeat(15, 60px); /* 15 colonnes de 60px chacune */
+    grid-auto-rows: 60px; /* Hauteur égale pour chaque ligne de la grille (60px) */
+    width: 900px; /* la taille de la bordure pour englober toutes les box*/
+}

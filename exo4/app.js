@@ -14,8 +14,6 @@ function boutonPresse(event){
     }if (event.keyCode === 38) {
         const newBox = box.cloneNode();
         carre.lastChild.remove(newBox);
-    } else {
-        
     }
 };
 
